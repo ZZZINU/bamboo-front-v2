@@ -1,9 +1,20 @@
+import React, { useState, useEffect } from 'react';
 import * as S from "../_styled/suggestionStyled";
 import { faPen, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import Dropdown from "@/components/suggestion/Dropdown";
 import logo from "../../components/image/logo.png";
+import NoticeModal from "@/components/modal/NoticeModal";
 
 export default function Suggestion() {
+
+    // 모달창 처음에만 뜨게
+    const [modalOpen, setModalOpen] = useState(false);
+
+    useEffect(() => {
+      setModalOpen(true);
+    }, []);
+
+
   return (
     <>
       <S.SuggestionWrap>
@@ -11,6 +22,8 @@ export default function Suggestion() {
           <S.ReportHeaderIcon icon={faPen} />
           &nbsp;제보하기
         </S.ReportHeader>
+
+        {modalOpen && <NoticeModal setModalOpen={setModalOpen} />}
 
         <S.SuggestionForm form>
           {/* 제보하기 #1 */}
