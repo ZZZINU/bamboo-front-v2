@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const SuggestionWrap = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 10px;
-`
+`;
 // 제보헤더
 export const ReportHeader = styled.div`
   display: flex;
@@ -16,20 +16,20 @@ export const ReportHeader = styled.div`
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -2px;
-`
+`;
 
 export const ReportHeaderIcon = styled(FontAwesomeIcon)`
   width: 18px;
-`
+`;
 
-export const SuggestionForm = styled.form``
+export const SuggestionForm = styled.form``;
 
 export const TextSection = styled.div`
   font-size: 18px;
   text-align: left;
   font-weight: 500;
   margin: 30px 30px 20px 30px;
-`
+`;
 
 export const NoticeSection = styled.div`
   display: flex;
@@ -39,7 +39,7 @@ export const NoticeSection = styled.div`
   text-align: left;
   color: #04c96b;
   padding: 3px 0;
-`
+`;
 
 export const NoticeSectionRound = styled.div`
   border: 1px solid #04c96b;
@@ -47,19 +47,19 @@ export const NoticeSectionRound = styled.div`
   border-radius: 10px;
   text-align: center;
   padding: 4px;
-`
+`;
 
 export const NoticeSectionLi = styled.li`
   padding: 3px 0;
   margin-left: 5px;
   line-height: 14px;
-`
+`;
 
 export const ContentSectionWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-`
+`;
 
 export const ContentSection = styled.textarea`
   width: 280px;
@@ -70,7 +70,20 @@ export const ContentSection = styled.textarea`
   border: 1px solid #b8b8b8;
   border-radius: 10px;
   line-height: 1.5;
-`
+
+  ::placeholder {
+    color: #b8b8b8;
+    text-align: left;
+    padding-left: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #04c96b;
+    box-shadow: 0 0 0 1px rgba(4, 201, 107, 0.3);
+  }
+`;
 
 export const PasswordSection = styled.input`
   border: 1px solid #b8b8b8;
@@ -94,19 +107,19 @@ export const PasswordSection = styled.input`
       -webkit-text-security: disc;
     }
   }
-`
+`;
 export const PasswordSectionWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: 10px 0;
-`
+`;
 export const PasswordText = styled.div`
   width: 80px;
   text-align: left;
   font-size: 12px;
-`
+`;
 
 export const Question = styled.span`
   color: #7a7a7a;
@@ -114,28 +127,28 @@ export const Question = styled.span`
   margin-top: 25px;
   padding-bottom: 0;
   font-size: 15px;
-`
+`;
 
 export const Logo = styled.img`
   width: 5%;
   margin-right: 10px;
-`
+`;
 
 export const CircleExclamationIcon = styled(FontAwesomeIcon)`
   width: 10px;
-`
+`;
 
 export const QuestionNotice = styled.span`
   color: #000;
   margin-top: -10px;
   line-height: 1.4;
-`
+`;
 
 export const CheckDGUWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-`
+`;
 
 export const CheckDGU = styled.input`
   width: 280px;
@@ -160,28 +173,28 @@ export const CheckDGU = styled.input`
     border: 1px solid #04c96b;
     box-shadow: 0 0 0 1px rgba(4, 201, 107, 0.3);
   }
-`
+`;
 
 export const CheckDGUCheckboxWrap = styled.div`
   margin-top: 10px;
   text-align: left;
   padding-left: 20px;
-`
+`;
 export const CheckDGUCheckbox = styled.input`
-  border-color: ${props => (props.checked ? '#04C96B' : '#B8B8B8')};
+  border-color: ${(props) => (props.checked ? "#04C96B" : "#B8B8B8")};
   accent-color: green;
-`
+`;
 export const CheckDGUText = styled.span`
   font-size: 13px;
   color: #04c96b;
-`
+`;
 // 제출 버튼
 
 export const SubmitButtonWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const SubmitButton = styled.button`
   display: flex;
@@ -194,4 +207,4 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 14px;
   cursor: pointer;
-`
+`;

@@ -20,6 +20,10 @@ export default function Suggestion() {
   const [currentSelected, setSelected] = useState("🎋 일반 제보");
   const [postReport, setPostReport] = useState("COMMON");
 
+  const handleContentChange = (event) => {
+    setContent(event.target.value);
+  };
+
   // 모달창 처음에만 뜨게
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -112,9 +116,9 @@ export default function Suggestion() {
           <S.ContentSectionWrap>
             <S.ContentSection
               placeholder="텍스트를 입력해주세요."
-              // value={content}
-              // onChange={handleContentChange}
-              // required
+              value={content}
+              onChange={handleContentChange}
+              required
             />
           </S.ContentSectionWrap>
           {/* 제보하기 #3 */}
