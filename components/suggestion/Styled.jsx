@@ -31,7 +31,6 @@ export const DropdownIcon = styled.span`
   display: inline-flex;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
-
   ${(props) => props.show && `transform: rotate(180deg);`}
 `;
 
@@ -39,7 +38,7 @@ export const SelectOptions = styled.ul`
   position: absolute;
   margin-top: 40px;
   list-style: none;
-  width: 300px;
+  width: 275px;
   margin-left: -10px;
   overflow: hidden;
   height: 95px;
@@ -70,4 +69,12 @@ export const Option = styled.li`
     background: #e8ffee;
     color: #04c96b;
   }
+`;
+
+export const DropdownWrap = styled.div`
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 `;
