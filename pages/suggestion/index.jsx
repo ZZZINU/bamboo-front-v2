@@ -12,8 +12,6 @@ import Dropdown from "@/components/suggestion/Dropdown";
 export default function Suggestion() {
   const router = useRouter();
 
-  // const [isExternal, setExternal] = useState(false);
-  // const [answer, setAnswer] = useState("");
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(true);
@@ -63,14 +61,10 @@ export default function Suggestion() {
       alert("비밀번호가 일치하지 않습니다.");
     } else {
       // 폼 데이터를 서버로 전송하는 POST 요청
-      // if (isExternal === true || answer === "") {
-      //   setAnswer("오답");
-      // }
+
       const formData = {
         content: content,
         password: password1,
-        // answer: answer,
-        // question: question.id,
         type: postReport,
       };
 
