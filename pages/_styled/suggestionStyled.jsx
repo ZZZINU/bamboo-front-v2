@@ -71,6 +71,7 @@ export const ContentSection = styled.textarea`
   border: 1px solid #b8b8b8;
   border-radius: 10px;
   line-height: 1.5;
+  resize: none;
 
   ::placeholder {
     color: #b8b8b8;
