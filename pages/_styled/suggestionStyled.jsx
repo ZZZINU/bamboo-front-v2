@@ -144,52 +144,52 @@ export const QuestionNotice = styled.span`
   line-height: 1.4;
 `;
 
-export const CheckDGUWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-`;
+// export const CheckDGUWrap = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+// `;
 
-export const CheckDGU = styled.input`
-  width: 280px;
-  padding: 17px;
-  align-items: flex-start;
-  display: flex;
-  border: 1px solid #b8b8b8;
-  border-radius: 10px;
-  line-height: 1.5;
-  margin-top: 15px;
+// export const CheckDGU = styled.input`
+//   width: 280px;
+//   padding: 17px;
+//   align-items: flex-start;
+//   display: flex;
+//   border: 1px solid #b8b8b8;
+//   border-radius: 10px;
+//   line-height: 1.5;
+//   margin-top: 15px;
 
-  ::placeholder {
-    color: #b8b8b8;
-    text-align: left;
-    padding-left: 10px;
-    padding: 0;
-    margin: 0;
-  }
+//   ::placeholder {
+//     color: #b8b8b8;
+//     text-align: left;
+//     padding-left: 10px;
+//     padding: 0;
+//     margin: 0;
+//   }
 
-  &:focus {
-    outline: none;
-    border: 1px solid #04c96b;
-    box-shadow: 0 0 0 1px rgba(4, 201, 107, 0.3);
-  }
-`;
+//   &:focus {
+//     outline: none;
+//     border: 1px solid #04c96b;
+//     box-shadow: 0 0 0 1px rgba(4, 201, 107, 0.3);
+//   }
+// `;
 
-export const CheckDGUCheckboxWrap = styled.div`
-  margin-top: 10px;
-  text-align: left;
-  padding-left: 20px;
-`;
-export const CheckDGUCheckbox = styled.input`
-  border-color: ${(props) => (props.checked ? "#04C96B" : "#B8B8B8")};
-  accent-color: green;
-`;
-export const CheckDGUText = styled.span`
-  font-size: 13px;
-  color: #04c96b;
-`;
+// export const CheckDGUCheckboxWrap = styled.div`
+//   margin-top: 10px;
+//   text-align: left;
+//   padding-left: 20px;
+// `;
+// export const CheckDGUCheckbox = styled.input`
+//   border-color: ${(props) => (props.checked ? "#04C96B" : "#B8B8B8")};
+//   accent-color: green;
+// `;
+// export const CheckDGUText = styled.span`
+//   font-size: 13px;
+//   color: #04c96b;
+// `;
+
 // 제출 버튼
-
 export const SubmitButtonWrap = styled.div`
   display: flex;
   justify-content: center;
@@ -207,4 +207,23 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 14px;
   cursor: pointer;
+`;
+
+// 비밀번호 일치/불일치
+export const passwordMatch = styled.div`
+  display: flex;
+  justify-content: center;
+  color: #04c96b;
+  font-size: 13px;
+  position: relative;
+  left: -10px;
+`;
+
+export const passwordMisMatch = styled.div`
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 30px;
+  color: #ff3636;
+  font-size: 13px;
 `;

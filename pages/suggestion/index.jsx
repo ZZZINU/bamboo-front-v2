@@ -1,27 +1,44 @@
 import React, { useState, useEffect } from "react";
+import { API } from "../api";
 import * as S from "../_styled/suggestionStyled";
-import { faPen, faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-
-import logo from "../../components/image/logo.png";
+import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
+import Cookies from "js-cookie";
 
 // 컴포넌트
 import NoticeModal from "@/components/modal/NoticeModal";
 import Dropdown from "@/components/suggestion/Dropdown";
 
 export default function Suggestion() {
-  const [isExternal, setExternal] = useState(false);
-  const [answer, setAnswer] = useState("");
+  const router = useRouter();
+
+  // const [isExternal, setExternal] = useState(false);
+  // const [answer, setAnswer] = useState("");
   const [password1, setPassword1] = useState("");
   const [password2, setPassword2] = useState("");
   const [passwordMatch, setPasswordMatch] = useState(true);
-
   const [content, setContent] = useState("");
-
   const [currentSelected, setSelected] = useState("🎋 일반 제보");
   const [postReport, setPostReport] = useState("COMMON");
 
   const handleContentChange = (event) => {
     setContent(event.target.value);
+  };
+
+  const handlePassword1Change = (event) => {
+    const inputValue = event.target.value;
+    if (/^[0-9]*$/.test(inputValue)) {
+      setPassword1(inputValue);
+      setPasswordMatch(event.target.value === password2);
+    }
+  };
+
+  const handlePassword2Change = (event) => {
+    const inputValue = event.target.value;
+    if (/^[0-9]*$/.test(inputValue)) {
+      setPassword2(inputValue);
+      setPasswordMatch(event.target.value === password1);
+    }
   };
 
   // 모달창 처음에만 뜨게
@@ -46,19 +63,18 @@ export default function Suggestion() {
       alert("비밀번호가 일치하지 않습니다.");
     } else {
       // 폼 데이터를 서버로 전송하는 POST 요청
-      if (isExternal === true || answer === "") {
-        setAnswer("오답");
-      }
+      // if (isExternal === true || answer === "") {
+      //   setAnswer("오답");
+      // }
       const formData = {
         content: content,
         password: password1,
-        answer: answer,
-        question: question.id,
+        // answer: answer,
+        // question: question.id,
         type: postReport,
       };
 
-      axios
-        .post("reports", formData)
+      API.post("reports", formData)
         .then((response) => {
           // console.log(response.data);
         })
@@ -77,7 +93,7 @@ export default function Suggestion() {
       }); // 10분(1/24*6) 후에 만료됩니다.
 
       // 성공했을시 ReportDone으로 이동
-      navigate("/reportDone"); // Navigate to the 'ReportDone' componen
+      router.push("/reportDone");
     }
   };
 
@@ -132,8 +148,8 @@ export default function Suggestion() {
               minLength={4}
               maxLength={4}
               type="password"
-              // value={password1}
-              // onChange={handlePassword1Change}
+              value={password1}
+              onChange={handlePassword1Change}
               required
               inputMode="numeric"
             ></S.PasswordSection>
@@ -146,39 +162,23 @@ export default function Suggestion() {
               minLength={4}
               maxLength={4}
               type="password"
-              // value={password2}
-              // onChange={handlePassword2Change}
+              value={password2}
+              onChange={handlePassword2Change}
               required
             ></S.PasswordSection>
           </S.PasswordSectionWrap>
-          {/* {password1 === '' || password2 === ''
-            ? ' '
+          {password1 === "" || password2 === ""
+            ? " "
             : !passwordMatch && (
-                <div
-                  style={{
-                    color: '#FF3636',
-                    fontSize: '13px',
-                    position: 'relative',
-                    left: '10px',
-                  }}
-                >
+                <S.passwordMisMatch>
                   비밀번호가 일치하지않습니다.
-                </div>
+                </S.passwordMisMatch>
               )}
-          {password1 === '' || password2 === ''
-            ? ' '
+          {password1 === "" || password2 === ""
+            ? " "
             : passwordMatch && (
-                <div
-                  style={{
-                    color: '#04C96B',
-                    fontSize: '13px',
-                    position: 'relative',
-                    left: '-20px',
-                  }}
-                >
-                  확인되었습니다.
-                </div>
-              )} */}
+                <S.passwordMatch>확인되었습니다.</S.passwordMatch>
+              )}
           <S.SubmitButtonWrap>
             <S.SubmitButton>제출하기</S.SubmitButton>
           </S.SubmitButtonWrap>

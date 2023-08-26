@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as S from "./Styled";
 
 // 드롭다운 아이콘 스타일
-
 const Dropdown = ({ currentSelected, setSelected, setPostReport }) => {
   const type = ["🎋 일반 제보", "🐠 니모 제보"];
   const [showOptions, setOptions] = useState(false);
