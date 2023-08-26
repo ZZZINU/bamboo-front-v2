@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import * as S from "./Styled";
 
 // 드롭다운 아이콘 스타일
@@ -32,11 +30,7 @@ const Dropdown = ({ currentSelected, setSelected, setPostReport }) => {
         </S.SelectOptions>
         {/* 드롭다운 아이콘 */}
         <S.DropdownIcon show={showOptions}>
-          <FontAwesomeIcon
-            icon={faCaretDown}
-            style={{ color: "#04C96B" }}
-            size="lg"
-          />
+          <S.DropdownFontAwesomeIcon icon={faCaretDown} />
         </S.DropdownIcon>
       </S.SelectBox>
     </S.DropdownWrap>

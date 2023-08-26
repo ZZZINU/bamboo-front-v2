@@ -1,8 +1,10 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const SelectBox = styled.div`
   width: 280px;
   padding: 12px;
+  padding-right: 20px;
   border-radius: 5px;
   border: 1px solid #c6c6c6;
   background-color: #ffffff;
@@ -31,7 +33,13 @@ export const DropdownIcon = styled.span`
   display: inline-flex;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
-  ${(props) => props.show && `transform: rotate(180deg);`}
+
+  ${(props) => props.show && `transform: rotate(180deg); `}
+`;
+
+export const DropdownFontAwesomeIcon = styled(FontAwesomeIcon)`
+  color: #04c96b;
+  width: 10px;
 `;
 
 export const SelectOptions = styled.ul`
