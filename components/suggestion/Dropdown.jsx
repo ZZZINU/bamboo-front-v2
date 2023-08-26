@@ -22,7 +22,7 @@ const Dropdown = ({ currentSelected, setSelected, setPostReport }) => {
               key={type}
               value={type}
               onClick={() => handleChangeType(type)}
-              className={type === currentSelected ? "focused" : "submenu"}
+              type={type === currentSelected}
             >
               {type}
             </S.Option>

@@ -55,11 +55,6 @@ export const SelectOptions = styled.ul`
   background-color: #ffffff;
   color: #282828;
   top: 20%;
-
-  .focused {
-    background: #e8ffee;
-    color: #04c96b;
-  }
 `;
 
 export const Option = styled.li`
@@ -72,6 +67,8 @@ export const Option = styled.li`
   justify-content: flex-start;
   padding-left: 24px;
   border: 1px solid #c6c6c6;
+  background: ${(props) => (props.type ? "#e8ffee" : "")};
+  color: ${(props) => (props.type ? "#04c96b" : "")};
 
   &:hover {
     background: #e8ffee;
