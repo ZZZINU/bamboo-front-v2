@@ -86,8 +86,8 @@ export default function Suggestion() {
         expires: 1 / (24 * 6),
       }); // 10분(1/24*6) 후에 만료됩니다.
 
-      // 성공했을시 ReportDone으로 이동
-      router.push("/reportDone");
+      // 성공했을시 제보 Done으로 이동
+      router.push("/suggestion/done");
     }
   };
 
