@@ -65,8 +65,8 @@ export default function Proposal() {
       // 쿠키 값을 설정하여 버튼을 비활성화합니다.
       Cookies.set("submitButtonClicked", "true", { expires: 1 / (24 * 6) }); // 10분(1/24*6) 후에 만료됩니다.
 
-      // 성공했을 때 ReportDone으로 이동
-      router.push("/proposalReportDone");
+      // 성공했을 때 건의 Done으로 이동
+      router.push("/proposal/done");
     }
   };
 

@@ -31,7 +31,7 @@ export const ReportOptionHeader = styled.div`
   text-align: left;
   font-weight: 500;
   margin: 30px 0px 17px 0px;
-  line-height: 1.3;
+  line-height: normal;
   letter-spacing: -0.3px;
 `;
 

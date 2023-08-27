@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ReportDoneText = styled.h1`
   color: #04c96b;
-  margin-top: 230px;
+  margin-top: 143px;
   font-weight: 700;
   font-size: 24px;
 `;
@@ -20,6 +20,7 @@ export const ReportContent = styled.div`
   font-size: 16px;
   margin-bottom: 100px;
   text-align: center;
+  line-height: normal;
 `;
 export const Img = styled(Image)`
   margin-top: 50px;
@@ -28,7 +29,7 @@ export const Img = styled(Image)`
 
 // 제출 버튼
 export const SubmitButton = styled.button`
-  margin: 50px 0px 40px 0px;
+  margin: 10px 0px 80px 0px;
   background-color: #04c96b;
   color: #fff;
   padding: 15px 130px;
