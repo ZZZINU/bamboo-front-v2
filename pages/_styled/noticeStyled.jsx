@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 export const NoticeWrap = styled.div`
   display: flex;
@@ -34,4 +35,47 @@ export const NoticePosts = styled.div`
 export const NoticePost = styled.div`
     width: 45%;
     margin-top: 5%;
+`
+
+// 상세페이지
+
+export const NoticeNum = styled.div`
+  color: #A4A4A4;
+  font-size: 15px;
+  margin: 7% 0 5% 0;
+`
+
+export const NoticeTitle = styled.div`
+  color: #04C96B;
+  font-size: 20px;
+`
+
+export const NoticeDate = styled.div`
+  color: #B6B6B6;
+  font-size: 16px;
+  margin: 2% 0;
+`
+
+export const NoticeImg = styled(Image)`
+  width: 100%;
+`
+
+export const NoticeInsta = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  margin: 2% 0;
+`
+
+export const NoticeInstaFont = styled(FontAwesomeIcon)`
+  width: 20px;
+`
+
+export const NoticeInstaText = styled.span`
+  font-size: 14px;
+`
+
+export const NoticeContent = styled.div`
+  font-size: 16px;
+  margin-top: 5%;
 `
