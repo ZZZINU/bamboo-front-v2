@@ -1,5 +1,7 @@
+import NoticeCard from '@/components/notice/NoticeCard';
 import * as S from '../_styled/noticeStyled'
 import { faBell } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Notice() {
 
@@ -12,13 +14,13 @@ export default function Notice() {
 
         <S.NoticePosts>
             <S.NoticePost>
-            공지사항 카드
+              <NoticeCard />
             </S.NoticePost>
             <S.NoticePost>
-            공지사항 카드
+              <NoticeCard />
             </S.NoticePost>
             <S.NoticePost>
-            공지사항 카드
+              <NoticeCard />
             </S.NoticePost>
         </S.NoticePosts>
     </S.NoticeWrap>
