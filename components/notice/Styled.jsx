@@ -8,6 +8,7 @@ export const NoticeCardWrap = styled.div`
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
+    margin: 5% 0;
 `
 
 export const NoticeImg = styled(Image)`
@@ -18,7 +19,7 @@ export const NoticeImg = styled(Image)`
 
 export const NoticeText = styled.div`
     width: 100%;
-    padding: 5%;
+    padding: 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
