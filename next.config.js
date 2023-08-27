@@ -5,6 +5,10 @@ const APIURL = "http://dgu-bamboo.site";
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // image url test로 추가 나중에 삭제해주세요
+  images: {
+    domains: ['play-lh.googleusercontent.com'],
+  },
 
   async redirects() {
     return [

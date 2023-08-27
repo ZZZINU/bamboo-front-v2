@@ -18,6 +18,7 @@ export default function Notice() {
               created_at: "2023-05-22T01:29:51",
               images: [
                 // 걍 사진 가져옴
+                  "https://play-lh.googleusercontent.com/Kbu0747Cx3rpzHcSbtM1zDriGFG74zVbtkPmVnOKpmLCS59l7IuKD5M3MKbaq_nEaZM=w480-h960-rw",
                   "https://play-lh.googleusercontent.com/Kbu0747Cx3rpzHcSbtM1zDriGFG74zVbtkPmVnOKpmLCS59l7IuKD5M3MKbaq_nEaZM=w480-h960-rw"
               ]
           },
@@ -38,7 +39,7 @@ export default function Notice() {
       ];
 
       setNoticePosts(dummy)
-      console.log(noticePosts)
+      console.log(noticePosts[0].images[1])
     } catch(e) {
       console.log(e)
     }
