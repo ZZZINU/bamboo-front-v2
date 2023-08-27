@@ -1,27 +1,41 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // search
-export const SearchContainer = styled.div`
+export const SearchContainer = styled.form`
   width: 95%;
   margin: 5% 2.5%;
   padding: 3% 7%;
   background-color: #FFF;
   border-radius: 20px;
   border: 1px solid #BCBCBC;
-  color: #BCBCBC;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
 
-export const SearchText = styled.div`
+export const SearchText = styled.input`
   font-size: 10px;
+  width: 80%;
+  outline: none;
+  border: none;
+  color: #BCBCBC;
+  &::placeholder {
+    color: #BCBCBC; /* Placeholder text color */
+  }
 `
 
-export const SearchBtn = styled(FontAwesomeIcon)`
-  width: 10px;
+export const SearchBtn = styled.button`
+  background-color: #FFF;
   cursor: pointer;
+  border: none;
+  color: #BCBCBC;
+  width: 8%;
+`
+
+export const SearchFont = styled(FontAwesomeIcon)`
+  width: 5px;
+  color: #BCBCBC;
 `
 
 // card

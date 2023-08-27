@@ -5,18 +5,18 @@ export const SuggestionWrap = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 10px;
+  margin: 5%;
+  width: 90%;
 `;
 
 // 제보헤더
 export const ReportHeader = styled.div`
   display: flex;
-  margin-left: 30px;
+  gap: 2%;
   text-align: left;
   color: #04c96b;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: -2px;
 `;
 
 export const ReportHeaderIcon = styled(FontAwesomeIcon)`
@@ -29,7 +29,8 @@ export const TextSection = styled.div`
   font-size: 18px;
   text-align: left;
   font-weight: 500;
-  margin: 30px 30px 20px 30px;
+  margin: 7% 0 3% 0;
+  /* margin: 30px 30px 20px 30px; */
 `;
 
 export const NoticeSection = styled.div`
@@ -60,10 +61,11 @@ export const ContentSectionWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
 `;
 
 export const ContentSection = styled.textarea`
-  width: 280px;
+  width: 100%;
   padding: 17px;
   height: 160px;
   align-items: flex-start;
@@ -90,7 +92,7 @@ export const ContentSection = styled.textarea`
 export const PasswordSection = styled.input`
   border: 1px solid #b8b8b8;
   border-radius: 10px;
-  width: 200px;
+  width: 70%;
   height: 35px;
   padding: 1px 10px;
 
@@ -112,13 +114,13 @@ export const PasswordSection = styled.input`
 `;
 export const PasswordSectionWrap = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 10px 0;
+  margin-bottom: 2%;
 `;
 export const PasswordText = styled.div`
-  width: 80px;
+  width: 20%;
   text-align: left;
   font-size: 12px;
 `;
@@ -157,10 +159,11 @@ export const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0px 40px 0px;
+  width: 100%;
+  margin-top: 15%;
+  padding: 5% 0;
   background-color: #04c96b;
   color: #fff;
-  padding: 15px 130px;
   border: none;
   border-radius: 14px;
   cursor: pointer;
@@ -169,18 +172,35 @@ export const SubmitButton = styled.button`
 // 비밀번호 일치/불일치
 export const passwordMatch = styled.div`
   display: flex;
-  justify-content: center;
+  margin-left: 30%;
+  padding: 2%;
   color: #04c96b;
   font-size: 13px;
   position: relative;
-  left: -10px;
 `;
 
 export const passwordMisMatch = styled.div`
   display: flex;
-  justify-content: center;
+  margin-left: 30%;
+  padding: 2%;
   position: relative;
-  left: 30px;
   color: #ff3636;
   font-size: 13px;
 `;
+
+// 댓글 추가 컴포넌트
+export const ReportNumInput = styled.input`
+  width: 100%;
+  outline: none;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+  height: 40px;
+  padding: 5%;
+`
+
+export const CommentNotice = styled.span`
+  font-size: 12px;
+  display: flex;
+  gap: 2%;
+  margin: 2% 0 5% 0;
+`
