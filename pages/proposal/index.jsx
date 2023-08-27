@@ -1,8 +1,17 @@
-import styled from "styled-components";
+import * as S from "../_styled/proposalStyled";
+
+// 아이콘
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export default function Proposal() {
-
   return (
-    <>건의</>
-  )
+    <>
+      <S.ReportContainer>
+        <S.ReportHeader>
+          <S.ProposalFontAwesomeIcon icon={faPaperPlane} />
+          &nbsp;건의하기
+        </S.ReportHeader>
+      </S.ReportContainer>
+    </>
+  );
 }
