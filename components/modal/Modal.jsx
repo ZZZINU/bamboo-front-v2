@@ -1,6 +1,6 @@
 import { Container, InstaFont, LogoImg, LogoText, ModalBtn, PageBtn, PageBtnProposal, PageFontawesomeIcon, PageInsta } from './Styled'
 import logo from '../image/logo.png'
-import { faPen, faComment, faPaperPlane} from "@fortawesome/free-solid-svg-icons";
+import { faPen, faComment, faPaperPlane, faBell } from "@fortawesome/free-solid-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { useRouter } from 'next/router';
 import { useRef, useEffect } from 'react';
@@ -43,9 +43,9 @@ export default function Modal({ modalOpenHandler }) {
                 <PageFontawesomeIcon icon={faPen} />
                 제보하기
             </PageBtn>
-            <PageBtn href='/comment' onClick={modalOpenHandler}>
-                <PageFontawesomeIcon icon={faComment} />
-                댓글달기
+            <PageBtn href='/notice' onClick={modalOpenHandler}>
+                <PageFontawesomeIcon icon={faBell} />
+                공지사항
             </PageBtn>
             <PageBtnProposal href='/proposal' onClick={modalOpenHandler}>
                 <PageFontawesomeIcon icon={faPaperPlane} />

@@ -85,7 +85,7 @@ export default function Comment() {
       }); // 10분(1/24*6) 후에 만료됩니다.
 
       // 성공했을시 CommentDone으로 이동
-      // router.push("/comment/done");
+      router.push("/comment/done");
     }
   };
 
