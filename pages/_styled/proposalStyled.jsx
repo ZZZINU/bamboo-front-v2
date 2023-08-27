@@ -45,11 +45,8 @@ export const ReportTextArea = styled.textarea`
   border-radius: 10px;
   line-height: 1.5;
   resize: none;
+  margin-bottom: 63px;
 
-  .question {
-    font-size: 12px;
-    padding: 10px 17px;
-  }
   ::placeholder {
     color: #b8b8b8;
     text-align: left;
@@ -71,28 +68,8 @@ export const ReportNoticeSection = styled.div`
   text-align: left;
   color: #04c96b;
   padding: 3px 0;
-
-  li {
-    padding: 3px 0;
-    margin-left: 5px;
-    line-height: 14px;
-  }
-
-  .round {
-    border: 1px solid #04c96b;
-    width: 100px;
-    border-radius: 10px;
-    text-align: center;
-    padding: 4px;
-  }
-
-  .question {
-    color: #7a7a7a;
-    margin-bottom: 10px;
-    padding-bottom: 0;
-    font-size: 15px;
-  }
 `;
+
 export const ReportNoticeSectionSpan = styled.span`
   color: #000;
   margin-top: -8px;
@@ -136,6 +113,7 @@ export const RowInputBox = styled.input`
 
 // 제출 버튼
 export const SubmitButton = styled.button`
+  text-align: center;
   margin: 70px 0px 40px 0px;
   background-color: #04c96b;
   color: #fff;
