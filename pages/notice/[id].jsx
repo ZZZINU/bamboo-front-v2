@@ -42,7 +42,7 @@ export default function NoticeDetail() {
 
   return (
     <S.NoticeWrap>
-        <S.NoticeHeader>
+        <S.NoticeHeader onClick={()=>{router.push(`/notice`)}}>
             <S.NoticeHeaderIcon icon={faBell} />
             공지사항
         </S.NoticeHeader>
