@@ -110,11 +110,10 @@ export const NoticeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 350px;
+  width: 80%;
   animation: ${fadeIn} 0.4s ease-in-out;
-  margin: 0px auto;
-  margin-bottom: -610px;
-  position: relative;
+  margin: 0;
+  position: absolute;
   z-index: 999;
 `;
 
