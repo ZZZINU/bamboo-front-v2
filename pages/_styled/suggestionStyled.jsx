@@ -36,7 +36,6 @@ export const TextSection = styled.div`
 export const NoticeSection = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 30px 0 30px;
   font-size: 10px;
   text-align: left;
   color: #04c96b;
@@ -45,7 +44,7 @@ export const NoticeSection = styled.div`
 
 export const NoticeSectionRound = styled.div`
   border: 1px solid #04c96b;
-  width: 100px;
+  width: 40%;
   border-radius: 10px;
   text-align: center;
   padding: 4px;
