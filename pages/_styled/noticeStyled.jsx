@@ -75,6 +75,7 @@ export const NoticeInsta = styled.div`
   align-items: center;
   gap: 2%;
   margin: 2% 0;
+  cursor: pointer;
 `
 
 export const NoticeInstaFont = styled(FontAwesomeIcon)`
