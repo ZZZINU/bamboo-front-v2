@@ -24,17 +24,17 @@ export const NoticeHeaderIcon = styled(FontAwesomeIcon)`
 `;
 
 export const NoticePosts = styled.div`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
 `
 
 export const NoticePost = styled.div`
-    width: 45%;
-    margin-top: 5%;
+  width: 45%;
+  margin-top: 5%;
 `
 
 // 상세페이지
