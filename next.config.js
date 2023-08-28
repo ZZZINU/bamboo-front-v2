@@ -7,7 +7,7 @@ const nextConfig = {
   swcMinify: true,
   // image url test로 추가 나중에 삭제해주세요
   images: {
-    domains: ['play-lh.googleusercontent.com'],
+    domains: ['play-lh.googleusercontent.com', 'www.instagram.com'],
   },
 
   async redirects() {

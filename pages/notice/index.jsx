@@ -57,13 +57,20 @@ export default function Notice() {
         </S.NoticeHeader>
 
         <S.NoticePosts>
-          {noticePosts.map((post)=>(
-            <S.NoticePost key={post.id}>
-              <NoticeCard
-                post={post}
-              />
-            </S.NoticePost>
-          ))}
+          { noticePosts.length !=0 ? <>
+            {noticePosts.map((post)=>(
+              <S.NoticePost key={post.id}>
+                <NoticeCard
+                  post={post}
+                />
+              </S.NoticePost>
+            ))}
+          </> : <>
+            <S.NoticeNone>
+              등록된 공지가 없습니다.
+            </S.NoticeNone>
+          </> }
+          
         </S.NoticePosts>
     </S.NoticeWrap>
   )

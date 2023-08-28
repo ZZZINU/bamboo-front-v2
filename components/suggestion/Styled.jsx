@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const SelectBox = styled.div`
-  width: 280px;
-  padding: 12px;
-  padding-right: 20px;
+  width: 100%;
+  padding: 12px 0;
   border-radius: 5px;
   border: 1px solid #c6c6c6;
   background-color: #ffffff;
@@ -13,26 +12,26 @@ export const SelectBox = styled.div`
   display: flex;
   font-size: 13px;
   align-items: center;
+  justify-content: space-between;
   position: relative;
 `;
 
 export const Label = styled.label`
   font-size: 14px;
-  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 5px;
+  padding-left: 10%;
   height: 25px;
   line-height: 25px;
-  width: 220px;
+  width: 60%;
 `;
 
 export const DropdownIcon = styled.span`
-  margin-left: 25px;
   display: inline-flex;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
+  padding: 0 10%;
 
   ${(props) => props.show && `transform: rotate(180deg); `}
 `;
@@ -46,8 +45,7 @@ export const SelectOptions = styled.ul`
   position: absolute;
   margin-top: 40px;
   list-style: none;
-  width: 275px;
-  margin-left: -10px;
+  width: 100%;
   overflow: hidden;
   height: 95px;
   max-height: ${(props) => (props.show ? "none" : "0")};
@@ -65,7 +63,7 @@ export const Option = styled.li`
   text-align: left;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 24px;
+  padding-left: 10%;
   border: 1px solid #c6c6c6;
   background: ${(props) => (props.type ? "#e8ffee" : "")};
   color: ${(props) => (props.type ? "#04c96b" : "")};

@@ -24,17 +24,27 @@ export const NoticeHeaderIcon = styled(FontAwesomeIcon)`
 `;
 
 export const NoticePosts = styled.div`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
 `
 
 export const NoticePost = styled.div`
-    width: 45%;
-    margin-top: 5%;
+  width: 45%;
+  margin-top: 5%;
+`
+
+export const NoticeNone = styled.div`
+  color: #A4A4A4;
+  font-size: 15px;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-top: 30%;
 `
 
 // 상세페이지
@@ -65,6 +75,7 @@ export const NoticeInsta = styled.div`
   align-items: center;
   gap: 2%;
   margin: 2% 0;
+  cursor: pointer;
 `
 
 export const NoticeInstaFont = styled(FontAwesomeIcon)`
