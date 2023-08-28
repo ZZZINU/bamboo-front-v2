@@ -37,6 +37,16 @@ export const NoticePost = styled.div`
   margin-top: 5%;
 `
 
+export const NoticeNone = styled.div`
+  color: #A4A4A4;
+  font-size: 15px;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-top: 30%;
+`
+
 // 상세페이지
 
 export const NoticeNum = styled.div`
